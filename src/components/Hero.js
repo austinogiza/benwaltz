@@ -18,10 +18,10 @@ const Hero = ({text, img}) => {
 
 const Herobody = styled.div`
 width: 100%;
-height: 649px;
+height: 660px;
 
 @media only screen and (max-width: 650px){
-    height: 450px;   
+    height: 350px;   
 }
 `
 const Heromain = styled.div`
@@ -32,8 +32,8 @@ z-index: 3;
 display: flex;
 justify-content: center;
 align-items: center;
+background: url(${props => props.img}) no-repeat fixed center center/cover;
 
-background: url(${props => props.img}) no-repeat center center/cover;
 `
 const Herooverlay = styled.div`
 width: 100%;
@@ -50,5 +50,8 @@ const Herotext = styled(headerHero)`
 color: ${BenColor.white};
 position: relative;
 z-index: 5;
+max-width: 650px;
+margin: 0 auto;
+width: 100%;
 `
 export default Hero
