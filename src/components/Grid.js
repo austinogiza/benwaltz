@@ -3,8 +3,10 @@ import styled from 'styled-components'
 import { Container } from '../container/Container'
 import { BenColor } from '../styles/ColorStyles'
 import {mainText,headerHero} from '../styles/TextStyles'
-import {linkButton} from '../styles/ButtonStyle'
+import {motion} from 'framer-motion'
 const Grid = () => {
+
+    const transition = {duration: 0.6, ease: [0.6,0.01,-0.05,0.9]}
     return (
        <Body>
 
@@ -17,30 +19,30 @@ const Grid = () => {
 
          
                    <GridtopImage>
-                       <Image src="https://res.cloudinary.com/dgssnxknb/image/upload/v1616716119/top_iyawbp.jpg" alt="Ben Waltz Photos"/>
+                       <Image whileHover={{scale: 1.01}} transition={transition} src="https://res.cloudinary.com/dgssnxknb/image/upload/v1616962107/top_zi0klb.jpg" alt="Ben Waltz Photos"/>
                    </GridtopImage>
                    <Gridtopdetails>
                    <Gridh1> Extraordinary MC </Gridh1>
            <Gridtext>I am an extraordinary MC with the zest to create unforgettable memories and turn your ideas into reality , with an amazing atmosphere seamlessly.</Gridtext>
-<Gridbutton to='/contact'>Contact Me</Gridbutton>
+
                    </Gridtopdetails>
 
 <Gridcenterdetails>
-<Gridh1>More Than A MC</Gridh1>
+<Gridh1>More Than An MC</Gridh1>
            <Gridtext>
 I help you create an extraordinary way to celebrate with the one person in your life that matters most
 </Gridtext>
 </Gridcenterdetails>
                    <GridcenterImage>
-                   <Image src="https://res.cloudinary.com/dgssnxknb/image/upload/v1616716119/middle_flxs5w.jpg" alt="Ben Waltz Photos"/>
+                   <Image whileHover={{scale: 1.01}} transition={transition}  src="https://res.cloudinary.com/dgssnxknb/image/upload/v1616962105/middle_nlawji.jpg" alt="Ben Waltz Photos"/>
                    </GridcenterImage>
                    <GridbottomImage>
-                   <Image src="https://res.cloudinary.com/dgssnxknb/image/upload/v1616716119/bottom_sm6ctu.jpg" alt="Ben Waltz Photos"/>   
+                   <Image whileHover={{scale: 1.01}} transition={transition}  src="https://res.cloudinary.com/dgssnxknb/image/upload/v1616962104/bottom_wtd7cm.jpg" alt="Ben Waltz Photos"/>   
                    </GridbottomImage>
                    <Gridbottomdetails>
                    <Gridh1>I bring you joy</Gridh1>
            <Gridtext>This is what I do for a living to bring you joy and laughter all the way to even after the event, For every beginning there is an end but I make sure you enjoy your big day from start to finish</Gridtext>
-           <Gridbutton to='/contact'>Contact Me</Gridbutton>
+          
                    </Gridbottomdetails>
             
            </Gridcover>
@@ -87,28 +89,27 @@ text-align: left ;
 `
 const Gridcover = styled.div`
 width: 100%;
-min-height: 500px;
+min-height: 300px;
 display: grid;
 grid-template-columns: repeat(2,1fr);
 margin: 80px 0;
 grid-auto-rows:  minmax(300px, auto);
 grid-gap: 150px;
 grid-row-gap: 114px;
-
 grid-template-areas: "GridtopImage Gridtopdetails"
 "Gridcenterdetails GridcenterImage"
 "GridbottomImage Gridbottomdetails";
 
 
 @media only screen and (max-width: 780px){
-    grid-gap: 40px;
+    grid-gap: 24px;
+    grid-row-gap:0px;
 }
 
 @media only screen and (max-width: 650px){
-    grid-gap: 32px;
+    grid-gap: 24px;
     grid-template-columns: repeat(1,1fr);
-    grid-row-gap:32px;
-    grid-auto-rows:  minmax(150px, auto);
+    grid-auto-rows:  minmax(200px, auto);
 
     grid-template-areas: "GridtopImage"
     "Gridtopdetails"
@@ -123,15 +124,15 @@ const GridtopImage = styled.div`
 grid-area:GridtopImage;
 max-width: 450px;
 width: 100%;
-min-height: 300px;
+min-height: 200px;
 `
-const Image = styled.img`
+const Image = styled(motion.img)`
 height: 100%;
 width: 100%;
 `
 const Gridtopdetails = styled.div`
 grid-area:Gridtopdetails;
-height: 100%;
+min-height: 200px;
 width: 100%;
 display: flex;
 flex-direction: column;
@@ -140,7 +141,7 @@ align-items: flex-start;
 `
 const Gridcenterdetails = styled.div`
 grid-area:Gridcenterdetails;
-height: 100%;
+min-height: 200px;
 width: 100%;
 display: flex;
 flex-direction: column;
@@ -151,16 +152,16 @@ const GridcenterImage = styled.div`
 grid-area:GridcenterImage;
 max-width: 450px;
 width: 100%;
-min-height: 300px;
+min-height: 200px;
 `
 const GridbottomImage = styled.div`
 max-width: 450px;
 grid-area:GridbottomImage;
 width: 100%;
-min-height: 300px;
+min-height: 200px;
 `
 const Gridbottomdetails = styled.div`
-height: 100%;
+min-height: 200px;
 grid-area:Gridbottomdetails;
 width: 100%;
 display: flex;
@@ -169,9 +170,6 @@ justify-content: center;
 align-items: flex-start;
 `
 
-const Gridbutton = styled(linkButton)`
-margin: 40px 0;
-`
 export default Grid
 
 

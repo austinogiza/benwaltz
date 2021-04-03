@@ -35,6 +35,7 @@ width: 100%;
 min-height: 300px;
 max-width: 700px;
 text-align: center;
+padding: 10px 25px;
 margin: 40px auto;
 display: flex;
 flex-direction: column;
@@ -48,9 +49,10 @@ margin: 24px 0 0 0;
 `
 const Gridtext = styled(mainText)`
 margin: 0;
-color: ${BenColor.white};
+color: ${BenColor.grey};
 `
 const Gridbutton = styled(outlineButton)`
 margin: 40px 0;
+
 `
 export default Message

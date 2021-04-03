@@ -2,8 +2,6 @@ import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import Hero from '../components/Hero'
 import { Container } from '../container/Container'
-import events from '../images/events.jpg'
-import large from '../images/large.jpg'
 import Rectangle23 from '../images/Rectangle 23.jpg'
 import Rectangle24 from '../images/Rectangle 24.jpg'
 import Rectangle25 from '../images/Rectangle 25.jpg'
@@ -21,7 +19,7 @@ document.title = "Events - Ben Waltz"
     return (
        <Eventsbody>
 
-       <Hero img={events} text="I have covered over 50 events within the last 2 years"/>
+       <Hero img="https://res.cloudinary.com/dgssnxknb/image/upload/v1616971085/events_pmlvch.jpg" text="Over 300 individuals have trusted Benwaltz in 3 years"/>
            <Container>
            <Eventssection>
 
@@ -150,7 +148,7 @@ display: flex;
 flex-direction: column;
 justify-content:center;
 align-items: center;
-background: url(${large}) no-repeat fixed center center/cover;
+background: url("https://res.cloudinary.com/dgssnxknb/image/upload/v1616971200/large_axfye4.jpg") no-repeat center center/cover;
 position: relative;
 `
 const Eventoverlay = styled.div`
@@ -166,13 +164,13 @@ z-index: 1;
 const Eventcover = styled.div`
 height: 100%;
 width: 100%;
-max-width: 490px;
+max-width: 550px;
 margin: 0 auto;
 display: flex;
 flex-direction: column;
 justify-content:center;
 align-items: center;
-
+padding: 10px 25px
 `
 const Eventtext = styled(headerHero)`
 width: 100%;
@@ -194,16 +192,19 @@ min-height: 350px;
 margin: 24px 0;
 display: grid;
 grid-template-columns: 2fr 1fr 1fr;
-grid-auto-rows: minmax(150px,auto);
+grid-auto-rows: minmax(350px,auto);
 grid-gap: 30px;
 @media only screen and (max-width: 650px){
     grid-template-columns: 1fr;  
+    grid-auto-rows: minmax(450px, auto);
+
 }
 `
 const Sectionlarge = styled.div`
 width: 100%;
 height: 100%;
 max-height: 450px;
+
 `
 const Largeimage = styled.div`
 height: 100%;
@@ -216,12 +217,16 @@ max-height: 450px;
 display: grid;
 grid-gap: 10px;
 grid-template-rows: repeat(2,1fr);
-
+grid-auto-rows: minmax(180px,auto);
+@media only screen and (max-width: 650px){
+    min-height: 450px;
+}
 
 `
 const Middleimage = styled.div`
-min-height: 150px;
+min-height: 180px;
 width: 100%;
+
 
 
 `
@@ -230,6 +235,9 @@ const Sectionend = styled.div`
 width: 100%;
 height: 100%;
 max-height: 450px;
+@media only screen and (max-width: 650px){
+    min-height: 450px;
+}
 `
 const Endimage = styled.div`
 height: 100%;

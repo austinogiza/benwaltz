@@ -19,7 +19,8 @@ window.addEventListener("scroll", showButton)
     },[])
 
     const goTop =()=>{
-        window.scrollTo(0,0);
+        window.scrollTo(0,0, {
+            duration: 0.3});
     }
     return (
         <Topcover onClick={goTop} show={show}>

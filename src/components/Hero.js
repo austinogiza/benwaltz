@@ -32,7 +32,7 @@ z-index: 3;
 display: flex;
 justify-content: center;
 align-items: center;
-background: url(${props => props.img}) no-repeat fixed center center/cover;
+background: url(${props => props.img}) no-repeat center center/cover;
 
 `
 const Herooverlay = styled.div`
@@ -53,5 +53,6 @@ z-index: 5;
 max-width: 650px;
 margin: 0 auto;
 width: 100%;
+padding: 10px 25px;
 `
 export default Hero

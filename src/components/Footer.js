@@ -34,7 +34,7 @@ const Footer = () => {
 const Footerbody = styled.div`
 width: 100%;
 min-height: 150px;
-background: ${BenColor.blue};
+/* background: ${BenColor.blue}; */
 `
 
 export const FooterContainer = styled.div`

@@ -3,12 +3,13 @@ import styled from 'styled-components'
 import Bend from '../components/Bend'
 import Body from '../components/Body'
 import ClientReviews from '../components/ClientReviews'
+import Experient from '../components/Experient'
 import Grid from '../components/Grid'
 import HomeHero from '../components/HomeHero'
 import Message from '../components/Message'
 import SliderComp from '../components/Slider'
 import { Container } from '../container/Container'
-import hero from '../images/hero.jpg'
+
 const Home = () => {
 
     useEffect(()=>{
@@ -18,7 +19,7 @@ const Home = () => {
     })
     return (
         <Homebody>
-<HomeHero img={hero} text="Hello, I am Ben Waltz" smalltext="They call me the PREMIUM MASTER OF CEREMONIES
+<HomeHero img="https://res.cloudinary.com/dgssnxknb/image/upload/v1616962104/hero_ctwmhd.jpg" text="Hello, I am Ben Waltz" smalltext="They call me the PREMIUM MASTER OF CEREMONIES
 "/>
 
 <SliderComp/>
@@ -29,6 +30,7 @@ const Home = () => {
 </Container>
 <Bend/>
 <Container>
+<Experient/>
     <ClientReviews/>
 </Container>
 <Message/>

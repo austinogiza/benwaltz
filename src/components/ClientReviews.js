@@ -1,30 +1,54 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import {headerHero} from '../styles/TextStyles'
 import {linkButton} from '../styles/ButtonStyle'
 import ReviewsCard from './ReviewsCard';
+import Skeleton from './Skeleton'
+import { v4 as uuidv4 } from 'uuid';
 const ClientReviews = () => {
 
-  
+    const [data, setData] = useState([])
+    const [loading, setLoading] = useState(false)
+    const fetchState =()=>{
+        setLoading(true)
+        axios
+        .get("https://sheetdb.io/api/v1/pax1rrj8oue4j")
+        .then(res=>{
+            setData(res.data)
+            console.log(res.data)
+            setLoading(false)
+            
+        })
+        .catch(err=>{
+            setLoading(false)
+        })
+    }
+
+    useEffect(()=>{
+        fetchState()
+
+    },[])
     return (
         <Body>
 <Reviewheader><Reviewh1>Here’s what my clients 
 have to say about me</Reviewh1></Reviewheader>
 <Slider >
-<Reviews>
-<ReviewsCard name="Ben Waltz" review="Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. "/>
+{loading && [1,2,3].map((n) =>
+
+    <Reviews key={n}>
+
+    <Skeleton />
 </Reviews>
-<Reviews>
-<ReviewsCard name="Ben Waltz" review="Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. "/>
+                   )}
+
+
+
+{data && data.map(reviews=> <Reviews key={uuidv4()}><ReviewsCard name={reviews.Name} review={reviews.Comment}/>
 </Reviews>
-<Reviews>
-<ReviewsCard name="Ben Waltz" review="Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. "/>
-</Reviews>
-<Reviews>
-<ReviewsCard name="Ben Waltz" review="Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. "/>
-</Reviews>
+).slice(0,3)}
 </Slider>
-<Gridbutton to='/reviews'>Contact Me</Gridbutton>
+<Gridbutton to='/reviews'>More Reviews</Gridbutton>
 
         </Body>
     )
@@ -70,6 +94,9 @@ margin: 0 auto;
 `
 const Reviewh1 = styled(headerHero)`
 margin: 80px 0;
+@media only screen and (max-width: 650px){
+    margin: 32px 0;
+}
 `
 const Reviews = styled.div`
 margin: 0;

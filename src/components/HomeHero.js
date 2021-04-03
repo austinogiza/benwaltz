@@ -36,7 +36,7 @@ z-index: 3;
 display: flex;
 justify-content: flex-start;
 align-items: flex-start;
-background: url(${props => props.img}) fixed no-repeat center center/cover;
+background: url(${props => props.img}) no-repeat center center/cover;
 @media only screen and (max-width: 650px){
 
 justify-content: center;

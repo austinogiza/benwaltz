@@ -1,36 +1,52 @@
 import React, {useEffect, useState}from 'react'
 import styled from 'styled-components'
 import Hero from '../components/Hero'
-import bg from '../images/bg.jpg'
-
+import Loader from '../components/Loader'
 import {HiOutlineMail} from 'react-icons/hi'
 import {FiMapPin, FiPhone} from 'react-icons/fi'
 import {Container} from '../container/Container'
 import { BenColor } from '../styles/ColorStyles'
 import { smallText,headerHero,mainText } from '../styles/TextStyles'
 import { submitButton,outlineButton } from '../styles/ButtonStyle'
-// import axios from 'axios'
+import axios from 'axios'
+import { contactURL } from '../constant'
 const Contact = () => {
     const initial ={
         name: "",
         email: "",
         subject:"",
         message:"",
+        number: ""
     }
 
     const [sent, setSent] = useState(false)
+    const [loading, setLoading] = useState(false)
     const [form, setForm] = useState(initial)
 
     const {
         name,
 email,
 subject,
-message
+message,
+number
     }=form
 
+    const handleSend = async (e)=>{
+        setLoading(true)
+        await axios
+        .post(contactURL, {name, email,subject, message,number})
+.then(res=>{
+    setLoading(false)
+    setSent(true)
+})
+.catch(err=>{
+    setLoading(false)
+})
+    }
     const handleSubmit=e=>{
         e.preventDefault();
-        setSent(true)
+        handleSend()
+      
     }
 
     const onChange = e =>{
@@ -45,7 +61,7 @@ useEffect(() => {
 }, [])
     return (
         <Contactbody>
-            <Hero img={bg} text="Contact"/>
+            <Hero img={"https://res.cloudinary.com/dgssnxknb/image/upload/v1616962104/bg_zqcdcs.jpg"} text="Contact"/>
 
             <Container>
                 <List>
@@ -106,7 +122,7 @@ You for your mail</Blueheader>
             <Formh1>
              Name   
             </Formh1>
-            <Forminput type="text" name="name" value={name} onChange={onChange}/>
+            <Forminput required type="text" name="name" value={name} onChange={onChange}/>
         </Formlabel>
     </Formrow>
     <Formrow>
@@ -114,7 +130,7 @@ You for your mail</Blueheader>
             <Formh1>
             Email   
             </Formh1>
-            <Forminput type="email" name="email" value={email} onChange={onChange}/>
+            <Forminput required type="email" name="email" value={email} onChange={onChange}/>
         </Formlabel>
     </Formrow>
     <Formrow>
@@ -122,7 +138,15 @@ You for your mail</Blueheader>
             <Formh1>
              Subject   
             </Formh1>
-            <Forminput type="text" name="subject" value={subject} onChange={onChange}/>
+            <Forminput required type="text" name="subject" value={subject} onChange={onChange}/>
+        </Formlabel>
+    </Formrow>
+    <Formrow>
+        <Formlabel>
+            <Formh1>
+             Phone Number   
+            </Formh1>
+            <Forminput required type="number" name="number" value={number} onChange={onChange}/>
         </Formlabel>
     </Formrow>
     <Formrow>
@@ -130,11 +154,11 @@ You for your mail</Blueheader>
             <Formh1>
              Message   
             </Formh1>
-            <Formrextarea name="message" value={message} onChange={onChange}/>
+            <Formrextarea required name="message" value={message} onChange={onChange}/>
         </Formlabel>
     </Formrow>
     <Formrow>
-       <Formbutton>Send</Formbutton>
+       <Formbutton type="submit">{loading? <Loader/>: "Send"}</Formbutton>
     </Formrow>
 </Form>
 </Formwrapper>
@@ -180,15 +204,18 @@ justify-content:center;
 align-items: center;
 flex-direction: column;
 width: 230px;
-min-height: 120px;
+min-height: 160px;
 padding: 10px;
 transition: 0.3s ease-in;
-border-radius: 0px;
+border-radius: 4px;
+border: 1px solid ${BenColor.grey};
 background: ${BenColor.white};
 transition: 0.4s ease-in-out;
 :hover{
     background: ${BenColor.blue};
     color: ${BenColor.black};
+    border: none;
+    outline: none;
 }
 `
 const Listicon = styled.div`
@@ -281,6 +308,7 @@ border: 1px solid ${BenColor.black};
 margin: 0;
 padding: 10px;
 outline: none;
+border-radius: 4px;
 transition: 0.3s ease-in;
 :active, :focus{
     border: 2px solid ${BenColor.blue};
@@ -290,7 +318,8 @@ transition: 0.3s ease-in;
 const Formrextarea = styled.textarea`
 resize:none;
 width: 100%;
-height: 280px;
+border-radius: 4px;
+height: 320px;
 border: 1px solid ${BenColor.black};
 margin: 0;
 padding: 10px;

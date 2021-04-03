@@ -2,12 +2,6 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Hero from '../components/Hero'
 import { Container } from '../container/Container'
-import bg from '../images/bg.jpg'
-import ben from '../images/ben.jpg'
-import benwaltz from '../images/benwaltz1.jpg'
-import benwaltz1 from '../images/benwaltz2.jpg'
-import couple from '../images/couple-with-ben.jpg'
-
 import { headerHero,bodyText,moderateHero } from '../styles/TextStyles'
 import { BenColor } from '../styles/ColorStyles'
 import { linkButton } from '../styles/ButtonStyle'
@@ -22,7 +16,7 @@ const About = () => {
 }, [])
     return (
        <Aboutpage>
-       <Hero text="About Me" img={bg}/>
+       <Hero text="About Me" img={`https://res.cloudinary.com/dgssnxknb/image/upload/v1616962104/bg_zqcdcs.jpg`}/>
          <Container>
 
         <Aboutcontainer>
@@ -37,9 +31,9 @@ const About = () => {
 
         <List>
                  <Listwrap>
-                 <Listcover><Image src={ben} alt="Ben Waltz" /></Listcover>
-                 <Listcover><Image  src={benwaltz} alt="Ben Waltz" /></Listcover>
-                 <Listcover><Image  src={benwaltz1} alt="Ben Waltz" /></Listcover>
+                 <Listcover><Image src="https://res.cloudinary.com/dgssnxknb/image/upload/v1616962103/ben_kntmyr.jpg" alt="Ben Waltz" /></Listcover>
+                 <Listcover><Image  src="https://res.cloudinary.com/dgssnxknb/image/upload/v1616970818/benwaltz1_1_oeocvd.jpg" alt="Ben Waltz" /></Listcover>
+                 <Listcover><Image  src="https://res.cloudinary.com/dgssnxknb/image/upload/v1616962103/benwaltz1_rihyhp.jpg" alt="Ben Waltz" /></Listcover>
                  </Listwrap>
                  </List>
 
@@ -48,7 +42,7 @@ const About = () => {
                  <Mesection>
          <Mewrap>
              <Meimage>
-             <Image src={couple} alt="Ben Waltz" />
+             <Image src="https://res.cloudinary.com/dgssnxknb/image/upload/v1616962103/couple-with-ben_stdo6i.jpg" alt="Ben Waltz" />
              </Meimage>
              <Medets>
                  <Meheader>They call me the PREMIUM MASTER OF CEREMONIES
