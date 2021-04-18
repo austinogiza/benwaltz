@@ -43,9 +43,9 @@ document.title = "Events - Ben Waltz"
 
            <Eventlarge>
 <Eventoverlay/>
-<Eventcover>    <Eventtext>I make every 
+<Eventcover>    <Eventtext>We make every 
 moment memorable</Eventtext>
-<Eventbutton to='/contact'>Contact Me</Eventbutton></Eventcover>
+<Eventbutton to='/contact'>Contact us</Eventbutton></Eventcover>
 </Eventlarge>
 
 <Container>

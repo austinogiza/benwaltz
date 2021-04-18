@@ -8,11 +8,11 @@ const Experient = () => {
     const cloudImage = [
 
         {id: 1,
-            image: "https://res.cloudinary.com/dgssnxknb/image/upload/v1617448584/benwaltz01_1_nolvqh.jpg",
+            image: "https://res.cloudinary.com/dgssnxknb/image/upload/v1618173387/ben-1_1_bjfpuo.jpg",
             name: "Ben Waltz"
         },{
             id: 2,
-            image: "https://res.cloudinary.com/dgssnxknb/image/upload/v1617448583/benwaltz03_1_wtyiou.jpg",
+            image: "https://res.cloudinary.com/dgssnxknb/image/upload/v1618173388/ben_1_jxr67u.jpg",
             name: "Ben Waltz"
         },{
             id: 3,

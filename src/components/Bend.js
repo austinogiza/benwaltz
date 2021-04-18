@@ -51,7 +51,8 @@ const Bend = () => {
 
           <ContainerBody>
           <Reviewheader><Reviewh1>What you get with Ben Waltz</Reviewh1>
-          <Gridtitletext>I am an effective communicator with  emotional intelligence, social intelligence and Event games guru. I have the capacity to engage your guest and leave them with a wow experience.
+          <Gridtitletext>An effective communicator, socially adaptable with high emotional intelligence.
+We engage your guests  fully, leaving them with a 'wow' experience.
 </Gridtitletext>
           </Reviewheader>
         
@@ -91,7 +92,7 @@ const Bend = () => {
 
           </Slider>
           </Gridcover>
-<Gridbutton to='/reviews'>Contact Me</Gridbutton>
+<Gridbutton to='/reviews'>Contact Us</Gridbutton>
 
           </ContainerBody>
         

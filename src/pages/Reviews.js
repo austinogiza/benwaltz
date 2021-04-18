@@ -8,7 +8,9 @@ import { BenColor } from '../styles/ColorStyles'
 import { headerHero } from '../styles/TextStyles'
 import axios from 'axios'
 import Skeleton from '../components/Skeleton'
-import { v4 as uuidv4 } from 'uuid';
+
+import { Link } from 'react-router-dom'
+import { reviewListURL } from '../constant'
 
 const Reviews = () => {
 
@@ -18,7 +20,7 @@ const Reviews = () => {
     const fetchState =()=>{
         setLoading(true)
         axios
-        .get("https://sheetdb.io/api/v1/pax1rrj8oue4j")
+        .get(reviewListURL)
         .then(res=>{
             setData(res.data)
             console.log(res.data)
@@ -39,11 +41,13 @@ const Reviews = () => {
 <Hero text="Tested and trusted to back it up." img="https://res.cloudinary.com/dgssnxknb/image/upload/v1616962104/bg_zqcdcs.jpg"/>
 <Container>
 <List>
+
                  <Listwrap>
                  {loading && [1,2,3].map((n) =>
                     <Skeleton key={n}/>)}
-{data && data.map(reviews=>
-    <ReviewsCard key={uuidv4()} name={reviews.Name} review={reviews.Comment}/>
+{data  && data.map(reviews=>
+  
+    <ReviewsCard key={reviews.id} name={reviews.name} rating={reviews.rating} image={reviews.photo}  review={reviews.comment}/>
 )}
 
                
@@ -54,7 +58,7 @@ const Reviews = () => {
     <Leaveheader>
     Leave your review
     </Leaveheader>
-    <Leavebutton><a href="https://docs.google.com/forms/d/e/1FAIpQLScfOdg7frVEUVPgdJQF7QQ8mpltJGNifznJat_pPMg0yQRf5A/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">Drop Review</a></Leavebutton>
+    <Leavebutton><Link to='/reviews-create'>Drop Review</Link></Leavebutton>
 </Leavereview>
 
 </Container>

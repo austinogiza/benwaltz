@@ -11,7 +11,7 @@ const Social = () => {
 
 
            <Gridtext>Keep In Touch</Gridtext>
-           <Gridh1> Follow Me On Social Media </Gridh1>
+           <Gridh1> Follow Us On Our Social Media Handles </Gridh1>
 <Gridbutton>
 
 <a rel="noreferrer noopener" href="https://www.instagram.com/benwaltz/" target="_blank">

@@ -25,6 +25,12 @@ export const EventsImageArr = [
     image:"https://res.cloudinary.com/dgssnxknb/image/upload/v1616262768/Rectangle_19_xi6c3c.jpg"},
     {id: 12,
     image:"https://res.cloudinary.com/dgssnxknb/image/upload/v1616263594/Rectangle_30_uhongk.jpg"},
+    {id: 13,
+        image:"https://res.cloudinary.com/dgssnxknb/image/upload/v1618173512/ben_new03_1_dphqxb.jpg"},
+        {id: 14,
+        image:"https://res.cloudinary.com/dgssnxknb/image/upload/v1618173514/ben_new02_1_dwdlwo.jpg"},
+        {id: 15,
+        image:"https://res.cloudinary.com/dgssnxknb/image/upload/v1618173511/ben_new01_1_zfejhn.jpg"},
  
     
 ]

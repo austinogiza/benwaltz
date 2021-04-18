@@ -34,7 +34,7 @@ const location = useLocation()
                         </Navul>
                     </Navlinks>
                     <Navbutton>
-                    <Gridbutton to='/contact'>Contact Me</Gridbutton>
+                    <Gridbutton to='/contact'>Contact Us</Gridbutton>
                     </Navbutton>
                     <Mobiletoggle onClick={toggleMenu}>
                         <Toggle >

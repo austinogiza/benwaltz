@@ -5,7 +5,7 @@ import {headerHero} from '../styles/TextStyles'
 import {linkButton} from '../styles/ButtonStyle'
 import ReviewsCard from './ReviewsCard';
 import Skeleton from './Skeleton'
-import { v4 as uuidv4 } from 'uuid';
+import { reviewListHomeURL } from '../constant'
 const ClientReviews = () => {
 
     const [data, setData] = useState([])
@@ -13,7 +13,7 @@ const ClientReviews = () => {
     const fetchState =()=>{
         setLoading(true)
         axios
-        .get("https://sheetdb.io/api/v1/pax1rrj8oue4j")
+        .get(reviewListHomeURL)
         .then(res=>{
             setData(res.data)
             console.log(res.data)
@@ -29,12 +29,14 @@ const ClientReviews = () => {
         fetchState()
 
     },[])
+
+   
     return (
         <Body>
-<Reviewheader><Reviewh1>Here’s what my clients 
-have to say about me</Reviewh1></Reviewheader>
+<Reviewheader><Reviewh1>Here’s what our clients 
+have to say about us</Reviewh1></Reviewheader>
 <Slider >
-{loading && [1,2,3].map((n) =>
+{loading && [0,1,2].map((n) =>
 
     <Reviews key={n}>
 
@@ -42,11 +44,11 @@ have to say about me</Reviewh1></Reviewheader>
 </Reviews>
                    )}
 
+               
 
-
-{data && data.map(reviews=> <Reviews key={uuidv4()}><ReviewsCard name={reviews.Name} review={reviews.Comment}/>
+{data && data.map(reviews=> <Reviews key={reviews.id}><ReviewsCard name={reviews.name} image={reviews.photo}  rating={reviews.rating} review={reviews.comment}/>
 </Reviews>
-).slice(0,3)}
+)}
 </Slider>
 <Gridbutton to='/reviews'>More Reviews</Gridbutton>
 
@@ -59,7 +61,7 @@ margin: 40px 0;
 `
 const Body = styled.div`
 width: 100%;
-min-height: 460px;
+min-height: 500px;
 margin: 0;
 display: flex;
 flex-direction: column;
@@ -70,15 +72,11 @@ const Slider = styled.div`
 width: 100%;
 min-height: 250px;
 display: grid;
-grid-template-columns: repeat(4,1fr);
+grid-template-columns: repeat(3,1fr);
 margin: 16px 0;
 grid-auto-rows:  minmax(250px, auto);
-grid-gap: 24px;
-
+grid-gap: 16px;
 place-items: center;
-@media only screen and (max-width: 800px){
-  grid-template-columns: repeat(2,1fr);
-}
 
 @media only screen and (max-width: 650px){
     grid-template-columns: repeat(1,1fr);
@@ -101,7 +99,7 @@ margin: 80px 0;
 const Reviews = styled.div`
 margin: 0;
 min-height: 250px;
-max-width: 300px;
+max-width: 350px;
 width: 100%;
 padding: 10px;
 `

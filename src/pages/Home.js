@@ -19,8 +19,7 @@ const Home = () => {
     })
     return (
         <Homebody>
-<HomeHero img="https://res.cloudinary.com/dgssnxknb/image/upload/v1616962104/hero_ctwmhd.jpg" text="Hello, I am Ben Waltz" smalltext="They call me the PREMIUM MASTER OF CEREMONIES
-"/>
+<HomeHero img="https://res.cloudinary.com/dgssnxknb/image/upload/v1616962104/hero_ctwmhd.jpg" text="Hello, welcome to Ben Waltz" smalltext="The Premium Master of Ceremonies"/>
 
 <SliderComp/>
 <Body/>

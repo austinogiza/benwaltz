@@ -57,7 +57,7 @@ number
 useEffect(() => {
  
 
-    document.title = "Contact - Ben Waltz"
+    document.title = "Contact Us - Ben Waltz"
 }, [])
     return (
         <Contactbody>
@@ -107,7 +107,7 @@ Festac Town, Lagos</Listitem>
     <Formblue>
         <Blueheader>Thank 
 You for your mail</Blueheader>
-<Bluetext>I will be in touch shortly</Bluetext>
+<Bluetext>We will be in touch shortly</Bluetext>
 <Bluebutton to='/'>Head Home</Bluebutton>
     </Formblue>
 </Formwrapper>

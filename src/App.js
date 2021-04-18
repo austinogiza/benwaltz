@@ -13,6 +13,7 @@ import Top from './components/Top';
 
 import {createBrowserHistory} from 'history'
 import WhatsApp from './components/WhatsApp';
+import NewReviews from './pages/NewReviews';
 function App() {
 
   const history = createBrowserHistory()
@@ -30,6 +31,7 @@ function App() {
     <Route exact path='/reviews' component={Reviews}/>
     <Route exact path='/about' component={About}/>
     <Route exact path='/events' component={Events}/>
+    <Route exact path='/reviews-create' component={NewReviews}/>
     <Route component={NotFound}/>
     </Switch>
     </AnimatePresence>

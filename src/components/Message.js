@@ -10,8 +10,8 @@ const Message = () => {
 
 
            <Gridtext>Get in touch</Gridtext>
-           <Gridh1> Let me anchor your event </Gridh1>
-<Gridbutton to='/contact'>Contact Me</Gridbutton>
+           <Gridh1> Let us anchor your event </Gridh1>
+<Gridbutton to='/contact'>Contact Us</Gridbutton>
     </Messagecover>
 
     </Body>

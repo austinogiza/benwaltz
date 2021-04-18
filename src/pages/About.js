@@ -12,18 +12,18 @@ const About = () => {
     useEffect(() => {
  
 
- document.title = "About Me - Ben Waltz"
+ document.title = "About Us - Ben Waltz"
 }, [])
     return (
        <Aboutpage>
-       <Hero text="About Me" img={`https://res.cloudinary.com/dgssnxknb/image/upload/v1616962104/bg_zqcdcs.jpg`}/>
+       <Hero text="About Us" img={`https://res.cloudinary.com/dgssnxknb/image/upload/v1616962104/bg_zqcdcs.jpg`}/>
          <Container>
 
         <Aboutcontainer>
         <Aboutprev>
-             <Prevhead>About Me</Prevhead>
+             <Prevhead>About Us</Prevhead>
              <Prevtext>
-             I am an extraordinary MC with the zest to create unforgettable memories and turn your ideas into reality , with an amazing atmosphere seamlessly.
+             We are an extraordinary MC brand with the zest to create unforgettable memories and turn your ideas into reality , with an amazing atmosphere seamlessly.
 
              </Prevtext>
          </Aboutprev>
@@ -45,11 +45,11 @@ const About = () => {
              <Image src="https://res.cloudinary.com/dgssnxknb/image/upload/v1616962103/couple-with-ben_stdo6i.jpg" alt="Ben Waltz" />
              </Meimage>
              <Medets>
-                 <Meheader>They call me the PREMIUM MASTER OF CEREMONIES
+                 <Meheader>They call us the PREMIUM MASTER OF CEREMONIES
 </Meheader>
-<Metext>I have covered over 50 events within the last 2 years and well known in Lagos
+<Metext>We have covered over 50 events within the last 2 years and well known in Lagos
 
-I MC weddings, corporate events, seminars, social events, birthdays, housewarming, church functions and lots more.</Metext>
+We MC weddings, corporate events, seminars, social events, birthdays, housewarming, church functions and lots more.</Metext>
 <Mebutton to='/contact'>Contact Me</Mebutton>
              </Medets>
          </Mewrap>
@@ -59,9 +59,9 @@ I MC weddings, corporate events, seminars, social events, birthdays, housewarmin
 
          
         <Aboutprev>
-             <NewPrevhead>I create an extraordinary way to celebrate with the one person in your life that matters most</NewPrevhead>
+             <NewPrevhead>We create an extraordinary way to celebrate with the one person in your life that matters most</NewPrevhead>
              <Prevtext>
-             This is what I do for a living to bring you joy and laughter all the way to even after the event, For every beginning there is an end but I make sure you enjoy your big day from start to finish
+             This is what we do for a living to bring you joy and laughter all the way to even after the event, For every beginning there is an end but I make sure you enjoy your big day from start to finish
 
 
              </Prevtext>

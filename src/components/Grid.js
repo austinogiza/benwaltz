@@ -11,8 +11,8 @@ const Grid = () => {
        <Body>
 
            <Container>
-           <Gridtitle><Gridtitleh1>I anchor events</Gridtitleh1>
-           <Gridtitletext>They call me the PREMIUM MASTER OF CEREMONIES</Gridtitletext>
+           <Gridtitle><Gridtitleh1>We anchor events</Gridtitleh1>
+           <Gridtitletext>That is why they call us the premium Master of Ceremonies.</Gridtitletext>
            </Gridtitle>
 
            <Gridcover>
@@ -23,14 +23,14 @@ const Grid = () => {
                    </GridtopImage>
                    <Gridtopdetails>
                    <Gridh1> Extraordinary MC </Gridh1>
-           <Gridtext>I am an extraordinary MC with the zest to create unforgettable memories and turn your ideas into reality , with an amazing atmosphere seamlessly.</Gridtext>
+           <Gridtext>We are an extraordinary brand with the zest to create unforgettable memories and turn your ideas into reality , with an amazing atmosphere seamlessly.</Gridtext>
 
                    </Gridtopdetails>
 
 <Gridcenterdetails>
 <Gridh1>More Than An MC</Gridh1>
            <Gridtext>
-I help you create an extraordinary way to celebrate with the one person in your life that matters most
+We help you create an extraordinary way to celebrate with the one person in your life that matters most
 </Gridtext>
 </Gridcenterdetails>
                    <GridcenterImage>
@@ -40,8 +40,8 @@ I help you create an extraordinary way to celebrate with the one person in your 
                    <Image whileHover={{scale: 1.01}} transition={transition}  src="https://res.cloudinary.com/dgssnxknb/image/upload/v1616962104/bottom_wtd7cm.jpg" alt="Ben Waltz Photos"/>   
                    </GridbottomImage>
                    <Gridbottomdetails>
-                   <Gridh1>I bring you joy</Gridh1>
-           <Gridtext>This is what I do for a living to bring you joy and laughter all the way to even after the event, For every beginning there is an end but I make sure you enjoy your big day from start to finish</Gridtext>
+                   <Gridh1>We bring you joy, creating lasting moments</Gridh1>
+           <Gridtext>This is what we do for a living to bring you joy and laughter all the way to even after the event, For every beginning there is an end but I make sure you enjoy your big day from start to finish</Gridtext>
           
                    </Gridbottomdetails>
             
