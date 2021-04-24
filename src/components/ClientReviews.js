@@ -87,7 +87,7 @@ place-items: center;
 const Reviewheader = styled.div`
 width: 100%;
 min-height: 100px;
-max-width: 550px;
+max-width: 650px;
 margin: 0 auto;
 `
 const Reviewh1 = styled(headerHero)`

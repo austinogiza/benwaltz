@@ -47,7 +47,7 @@ justify-content:center;
 align-items: center;
 flex-direction: column;
 max-width: 350px;
-min-height: 300px;
+min-height: 450px;
 width: 100%;
 padding: 10px;
 transition: 0.3s ease-in;

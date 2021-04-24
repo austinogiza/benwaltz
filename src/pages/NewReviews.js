@@ -129,7 +129,10 @@ setLoading(false)
 setPhotoError("Please upload a photo")
 setLoading(false)
     }}
-
+if(photo.size > 5000000){
+    setPhotoError("Image size is greater than 5MB")
+setLoading(false)
+}
 
     }
     const handleSubmit=e=>{
@@ -286,7 +289,7 @@ You for your review</Blueheader>
             <Formh1>
             Photo
             </Formh1>
-            <Forminput className={`${photoError && 'form-error'}`}  type="file"  onChange={(e)=>setPhoto(e.target.files[0])}/>
+            <Forminput className={`${photoError && 'form-error'}`}  accept="image/*" type="file"  onChange={(e)=>setPhoto(e.target.files[0])}/>
         </Formlabel>
         {photoError && <FormError transition={{duration: 0.4}} initial={{opacity: 0, y: -5}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -5}}>{photoError}</FormError>}
     </Formrow>
